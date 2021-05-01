@@ -1,3 +1,9 @@
+<?php
+
+  session_start();
+
+?>
+
 
 <html>
   <head>
@@ -46,6 +52,13 @@
                     <div class="text-danger"> 
                           Email ou senha inválidos
                     </div>
+
+                  <? } ?>
+                  <?  if(isset($_GET['login']) && $_GET['login'] == 'error2'){  ?>
+
+                  <div class="text-danger"> 
+                        Faça login antes de acessar as páginas protegidas
+                  </div>
 
                   <? } ?>
                 <button class="btn btn-lg btn-info btn-block" type="submit">Entrar</button>
